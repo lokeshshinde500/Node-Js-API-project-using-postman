@@ -1,0 +1,598 @@
+{
+	"info": {
+		"_postman_id": "4b8cd455-8444-4527-b1b2-0f58d630d950",
+		"name": "Admin_manager_employee_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33925829"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "admin register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Lokesh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "a@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/admin/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "Lokeshinde500@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/admin/login?email=a@gmail.com&password=123",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "a@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manager register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmllZEFkbWluIjp7Il9pZCI6IjY2MTYwN2I0NjYxYzkzOTM1ZDA1OWU2NyIsIm5hbWUiOiJMb2tlc2giLCJlbWFpbCI6Ikxva2VzaGluZGU1MDBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkMkE3bW1tU05tU1YxMVlBNThrMERIT0wuT09iL2lTdU5kMHVWeVkyb0ZsenI4YWt0VFh5amUiLCJfX3YiOjB9LCJpYXQiOjE3MTI4NDM5MjIsImV4cCI6MTcxMjg0NzUyMn0.vjUx8FQjBOvAGIAurOTi4WhGVsbb35E8JuBA8t_PvBQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lokesh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lokeshinde500@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "81409 83496",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "full stack developer",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "35000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/EJ502TS/Pictures/ojas photo/1635345200201.jpg"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/admin/managerRegister",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"managerRegister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view all manager",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmllZEFkbWluIjp7Il9pZCI6IjY2MTYwN2I0NjYxYzkzOTM1ZDA1OWU2NyIsIm5hbWUiOiJMb2tlc2giLCJlbWFpbCI6Ikxva2VzaGluZGU1MDBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkMkE3bW1tU05tU1YxMVlBNThrMERIT0wuT09iL2lTdU5kMHVWeVkyb0ZsenI4YWt0VFh5amUiLCJfX3YiOjB9LCJpYXQiOjE3MTI5MDQ5OTEsImV4cCI6MTcxMjkwODU5MX0.4wMqublFw9m-hiOM6c9J7hx5q6qHMA2AaV0Qboh4Xe0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/admin/viewManager",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"viewManager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete manager",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmllZEFkbWluIjp7Il9pZCI6IjY2MTYwN2I0NjYxYzkzOTM1ZDA1OWU2NyIsIm5hbWUiOiJMb2tlc2giLCJlbWFpbCI6Ikxva2VzaGluZGU1MDBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkMkE3bW1tU05tU1YxMVlBNThrMERIT0wuT09iL2lTdU5kMHVWeVkyb0ZsenI4YWt0VFh5amUiLCJfX3YiOjB9LCJpYXQiOjE3MTI4NDQ3MjAsImV4cCI6MTcxMjg0ODMyMH0.uco_McT--HrsILqGp-td26tk6R3VouFPA7_Dw1sZNbg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/admin/deleteManager/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"deleteManager",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manager",
+			"item": [
+				{
+					"name": "manager login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lokeshinde500@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Lokesh@42538",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/manager/login?email=lokeshinde500@gmail.com&password=Lokesh@42538",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"manager",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "lokeshinde500@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "Lokesh@42538"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manager profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmllZE1hbmFnZXIiOnsiX2lkIjoiNjYxN2VmZGU1YTAyNDMzYzk0YTAxODcwIiwibmFtZSI6Ikxva2VzaCIsImVtYWlsIjoibG9rZXNoaW5kZTUwMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ikxva2VzaEA0MjUzOCIsInBob25lIjoiODE0MDkgODM0OTYiLCJhZ2UiOiIyMiIsImdlbmRlciI6Im1hbGUiLCJkZXNpZ25hdGlvbiI6ImZ1bGwgc3RhY2sgZGV2ZWxvcGVyIiwic2FsYXJ5IjoiMzUwMDAiLCJpbWFnZSI6Ii91cGxvYWRzL21hbmFnZXJJbWFnZXMvaW1hZ2VfMTcxMjg0NDc2NjU5MyIsInN0YXR1cyI6dHJ1ZSwicm9sZSI6Im1hbmFnZXIiLCJhZG1pbl9pZCI6IjY2MTYwN2I0NjYxYzkzOTM1ZDA1OWU2NyIsImNyZWF0ZWRfZGF0ZSI6IkFwcmlsIDExLCAyMDI0IDc6NDIgUE0iLCJ1cGRhdGVkX2RhdGUiOiJBcHJpbCAxMSwgMjAyNCA3OjQyIFBNIiwiX192IjowfSwiaWF0IjoxNzEyOTgxMzY3LCJleHAiOjE3MTI5ODQ5Njd9.6-8RMtlooaUxx9mQB3G6bUC-znqEll-krKuqtECq3Zo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/manager/viewProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"manager",
+								"viewProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manager update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmllZE1hbmFnZXIiOnsiX2lkIjoiNjYxYTI2NjY2ZDA3ZWI4ZTdhMDQ5MTI1IiwibmFtZSI6Ikxva2VzaCIsImVtYWlsIjoibG9rZXNoaW5kZTUwQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiTG9rZXNoQDI4NTEwIiwicGhvbmUiOiI4MTQwOSA4MzQ5NiIsImFnZSI6IjIyIiwiZ2VuZGVyIjoibWFsZSIsImRlc2lnbmF0aW9uIjoiZnVsbCBzdGFjayBkZXZlbG9wZXIiLCJzYWxhcnkiOiIzNTAwMCIsImltYWdlIjoiL3VwbG9hZHMvbWFuYWdlckltYWdlcy9pbWFnZV8xNzEyOTg5Nzk4MjgwIiwic3RhdHVzIjp0cnVlLCJyb2xlIjoibWFuYWdlciIsImFkbWluX2lkIjoiNjYxNjA3YjQ2NjFjOTM5MzVkMDU5ZTY3IiwiY3JlYXRlZF9kYXRlIjoiQXByaWwgMTMsIDIwMjQgMTE6NTkgQU0iLCJ1cGRhdGVkX2RhdGUiOiJBcHJpbCAxMywgMjAyNCAxMTo1OSBBTSIsIl9fdiI6MH0sImlhdCI6MTcxMjk4OTg0NSwiZXhwIjoxNzEyOTkzNDQ1fQ.Hk00Zlh6a2umEFf_BIQV_t_Jqz2DquvtcUkSRwlzkBE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "lokesh shinde",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lokeshinde500@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123 124 134",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/EJ502TS/Pictures/ojas photo/1635345200201.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/manager/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"manager",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmllZE1hbmFnZXIiOnsiX2lkIjoiNjYxN2VmZGU1YTAyNDMzYzk0YTAxODcwIiwibmFtZSI6Ikxva2VzaCIsImVtYWlsIjoibG9rZXNoaW5kZTUwMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ikxva2VzaEA0MjUzOCIsInBob25lIjoiODE0MDkgODM0OTYiLCJhZ2UiOiIyMiIsImdlbmRlciI6Im1hbGUiLCJkZXNpZ25hdGlvbiI6ImZ1bGwgc3RhY2sgZGV2ZWxvcGVyIiwic2FsYXJ5IjoiMzUwMDAiLCJpbWFnZSI6Ii91cGxvYWRzL21hbmFnZXJJbWFnZXMvaW1hZ2VfMTcxMjg0NDc2NjU5MyIsInN0YXR1cyI6dHJ1ZSwicm9sZSI6Im1hbmFnZXIiLCJhZG1pbl9pZCI6IjY2MTYwN2I0NjYxYzkzOTM1ZDA1OWU2NyIsImNyZWF0ZWRfZGF0ZSI6IkFwcmlsIDExLCAyMDI0IDc6NDIgUE0iLCJ1cGRhdGVkX2RhdGUiOiJBcHJpbCAxMSwgMjAyNCA3OjQyIFBNIiwiX192IjowfSwiaWF0IjoxNzEyOTgwNzkzLCJleHAiOjE3MTI5ODQzOTN9.4kUDiP6lqNX4g_dYC_kgiDU75p4xLnGyluUoXpupbls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "bharat",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Lokesh500@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "88888 88888",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "web developer",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "34000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/EJ502TS/Pictures/ojas photo/1635345200201.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/manager/employeeRegister",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"manager",
+								"employeeRegister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view all employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/manager/viewEmployees",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"manager",
+								"viewEmployees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/manager/deleteEmployee/661a04d1d7ebc3e0834de2fe",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"manager",
+								"deleteEmployee",
+								"661a04d1d7ebc3e0834de2fe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "employee login",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "employee profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/employee/viewProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"employee",
+								"viewProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmllZEVtcGxveWVlIjp7Il9pZCI6IjY2MWExN2IyOGJlNWJiNWY0OWM3ZmViMSIsIm5hbWUiOiJiaGFyYXQiLCJlbWFpbCI6Ikxva2VzaDUwMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImJoYXJhdEAxNTM0OCIsInBob25lIjoiODg4ODggODg4ODgiLCJhZ2UiOiIyMiIsImdlbmRlciI6Im1hbGUiLCJkZXNpZ25hdGlvbiI6IndlYiBkZXZlbG9wZXIiLCJzYWxhcnkiOiIzNDAwMCIsImltYWdlIjoiL3VwbG9hZHMvZW1wbG95ZWVJbWFnZXMvaW1hZ2VfMTcxMjk4NjAzNDY1OSIsInN0YXR1cyI6dHJ1ZSwicm9sZSI6ImVtcGxveWVlIiwibWFuYWdlcl9pZCI6IjY2MTdlZmRlNWEwMjQzM2M5NGEwMTg3MCIsImNyZWF0ZWRfZGF0ZSI6IkFwcmlsIDEzLCAyMDI0IDEwOjU3IEFNIiwidXBkYXRlZF9kYXRlIjoiQXByaWwgMTMsIDIwMjQgMTA6NTcgQU0iLCJfX3YiOjB9LCJpYXQiOjE3MTMwMDk0MjQsImV4cCI6MTcxMzAxMzAyNH0.rIxYJ7oT-TMkwbMdsLNzJZIXzHVK0I017Cvv1rG60I0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "rahul",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Lokesh500@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "88118 88881",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "age ",
+									"value": "27",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/EJ502TS/Pictures/ojas photo/1635345200201.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/employee/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"employee",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
